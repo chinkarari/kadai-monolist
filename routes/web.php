@@ -23,5 +23,5 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::resource('items', 'ItemController', ['only' => ['create']]);
+    Route::resource('items', 'ItemsController', ['only' => ['create']]);
 });
